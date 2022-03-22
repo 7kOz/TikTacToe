@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tiktactoezzz/controllers/game_controller.dart';
+import 'package:tiktactoezzz/ui/widgets/martijn_raving.dart';
 
 class GameWidget extends StatelessWidget {
   GameWidget({Key? key}) : super(key: key);
@@ -9,6 +10,8 @@ class GameWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Visibility(
+            visible: gameController.gameOver, child: const MartijnRaving()),
         Visibility(
           visible: gameController.gameOver == false,
           child: Container(

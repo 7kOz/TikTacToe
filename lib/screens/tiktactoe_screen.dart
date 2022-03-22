@@ -50,10 +50,12 @@ class TikTacToeScreen extends StatelessWidget {
                     ThemeButton(),
                     const SizedBox(height: 40),
                     PlayerTurnWidget(),
-                    ResultWidget(),
                     const SizedBox(height: 20),
                     GameWidget(),
+                    ResultWidget(),
+                    const SizedBox(height: 20),
                     PlayAgainButton(),
+                    const SizedBox(height: 40),
                   ],
                 );
               },

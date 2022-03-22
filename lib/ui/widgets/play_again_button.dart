@@ -19,7 +19,15 @@ class PlayAgainButton extends StatelessWidget {
               color: Color.fromARGB(255, 26, 99, 158),
             ),
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                //Reset The Game
+                gameController.onInit();
+                gameController.lastValue = 'X';
+                gameController.gameOver = false;
+                gameController.turn = 0;
+                gameController.result = '';
+                gameController.scoreBoard = [0, 0, 0, 0, 0, 0, 0, 0];
+              },
               child: Center(
                 child: Text(
                   'Play Again',

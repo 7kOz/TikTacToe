@@ -8,13 +8,18 @@ class PlayerTurnWidget extends StatelessWidget {
   GameController gameController = Get.put(GameController());
   @override
   Widget build(BuildContext context) {
-    return Text(
-      ' ${gameController.lastValue} turn'.toUpperCase(),
-      style: TextStyle(
-          color: context.theme.focusColor,
-          fontSize: 30,
-          fontWeight: FontWeight.w600,
-          letterSpacing: 2),
-    );
+    return GetBuilder<GameController>(builder: (gameController) {
+      return Visibility(
+        visible: gameController.gameOver == false,
+        child: Text(
+          ' ${gameController.lastValue} turn'.toUpperCase(),
+          style: TextStyle(
+              color: context.theme.focusColor,
+              fontSize: 30,
+              fontWeight: FontWeight.w600,
+              letterSpacing: 2),
+        ),
+      );
+    });
   }
 }
