@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tiktactoezzz/controllers/game_controller.dart';
+import 'package:tiktactoezzz/ui/widgets/game_widget.dart';
 import 'package:tiktactoezzz/ui/widgets/theme_button.dart';
 
 class TikTacToeScreen extends StatelessWidget {
@@ -44,6 +45,7 @@ class TikTacToeScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     ThemeButton(),
+                    GameWidget(),
                   ],
                 );
               },
